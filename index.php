@@ -1,26 +1,25 @@
-<?php 
+<?php get_header(); ?>
 
-get_header();
-
-while (have_posts()) {
-    the_post(); ?>
-    <main>
-        <section>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="hero">
-                            <?php the_post_thumbnail();?>
-                            <div class="text">
-                                <h1><?php the_title(); ?></h1>
-                                <p><?php the_content(); ?></p>
-                            </div>
+<main>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="hero">
+                    <?php
+                    while (have_posts()) {
+                        the_post(); ?>
+                        <?php the_post_thumbnail();?>
+                        <div class="text">
+                            <h1><?php the_title(); ?></h1>
+                            <p><?php the_content(); ?></p>
                         </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
-    <?php } ?>
+        </div>
+    </section>
+</main>
 
-    <?php get_footer(); ?>
+<?php get_footer(); ?>
