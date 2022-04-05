@@ -339,6 +339,20 @@ article .meta {
 		padding: 10px 0;
 	}
 
+/* Tillagd */
+
+.menu {
+	margin: 0;
+	padding: 0;
+}
+
+.menu > li {
+	list-style: none;
+}
+
+
+/*  */
+
 .searchform-wrap {
 	margin-bottom: 30px;
 }
