@@ -425,7 +425,7 @@ article .meta {
 
 }
 
-.pagination {
+.pagination, .nav-links {
 	margin: 30px 0 0;
 	text-align: center;
 	width: 100%;
@@ -435,7 +435,7 @@ article .meta {
 		display: none;
 	}
 
-	.pagination > .page-numbers {
+	.nav-links > .page-numbers {
 		background-color: crimson;
 		color: white;
 		display: inline-block;
@@ -443,7 +443,7 @@ article .meta {
 		padding: 5px 10px;
 	}
 
-		.pagination > .page-numbers.current {
+		.nav-links > .page-numbers.current {
 			background-color: white;
 			color: crimson;
 		}
