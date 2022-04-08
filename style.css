@@ -107,6 +107,8 @@ textarea {
 				margin-left: 10px;
 			}
 
+		
+
 @media ( max-width: 768px ) {
 
 #header {
@@ -208,6 +210,23 @@ main {
 .hero {
 	position: relative;
 }
+
+/* tillagd  */
+.wpcf7-form input, .wpcf7-form textarea {
+	width: 200px;
+}
+
+.wpcf7-form textarea {
+	height: 46px;
+}
+
+.wpcf7-form input[type="submit"] {
+	width: 57px;
+}
+
+
+
+/*  */
 
 	.hero .text {
 		color: white;
@@ -455,6 +474,17 @@ article .meta {
 			margin-bottom: 30px;
 		}
 
+		#sidebar > ul .widget_block {
+			margin-bottom: 5px;
+		}
+		#sidebar > ul .pagenav {
+			margin-bottom: 5px;
+		}
+
+		.menu:last-child {
+			margin-bottom: 30px;
+		}
+
 			#sidebar > ul > li > ul {
 				margin: 0;
 				padding: 0;
@@ -535,6 +565,15 @@ article .meta {
 				min-width: 20px;
 				text-align: center;
 			}
+
+			/* Tillagd */
+
+			.col-xs-12 > li {
+				list-style: none;
+			}
+
+
+			/*  */
 
 @media ( max-width: 768px ) {
 

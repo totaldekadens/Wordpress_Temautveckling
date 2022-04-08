@@ -16,13 +16,7 @@
 						 <a class="logo" href="<?php get_template_directory_uri(); ?>/index.php"> <?php echo get_bloginfo('name'); ?></a> <!-- Kolla om du kan hitta något bättre -->
 					</div> 
 					<div class="col-sm-6 hidden-xs">
-						<form id="searchform" class="searchform">
-							<div>
-								<label class="screen-reader-text">Sök efter:</label>
-								<input type="text" />
-								<input type="submit" value="Sök" />
-							</div>
-						</form>
+						<?php get_search_form(); ?>
 					</div>
 					<div class="col-xs-4 text-right visible-xs">
 						<div class="mobile-menu-wrap">
@@ -34,14 +28,10 @@
 			</div>
 		</header>
 
+
+		
 		<div class="mobile-search">
-			<form id="searchform" class="searchform">
-				<div>
-					<label class="screen-reader-text">Sök efter:</label>
-					<input type="text" />
-					<input type="submit" value="Sök" />
-				</div>
-			</form>
+		<?php get_search_form(); ?>
 		</div>
 
 		<nav id="nav">

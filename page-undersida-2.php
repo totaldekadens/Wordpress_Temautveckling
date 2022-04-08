@@ -11,7 +11,13 @@
 						<p><?php the_content();?></p>
 					<?php } ?>
 				</div>
-				<?php get_template_part('sidebar-undersida-left'); ?>
+				<aside id="secondary" class="col-xs-12 col-md-3 col-md-pull-9">
+					<?php wp_nav_menu(array(
+            		'theme_location' => 'sidebar-sibling',
+            		'menu_class' => 'side-menu',
+            			)); ?> 
+				</aside>
+				
 			</div>
 		</div>
 	</section>
