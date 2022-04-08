@@ -13,7 +13,8 @@
                 <?php dynamic_sidebar('sidor-sidebar'); ?> 
 
                 <!-- Lägger till en meny baserat på utvalda sidor (Meny). 
-                När jag valde widget så kunde jag inte anpassa vilka sidor jag kunde välja. Så det fick bli meny för att komma så nära original som möjligt då "undersidorna" inte är med i mockup.   -->
+                När jag valde widget så kunde jag inte anpassa vilka sidor jag kunde välja. 
+                Så det fick bli meny för att komma så nära original som möjligt då "undersidorna" inte är med i mockup.   -->
                 <?php wp_nav_menu(array(  
                     'theme_location' => 'sidebar-sidor',
                     'menu_class' => 'menu',
