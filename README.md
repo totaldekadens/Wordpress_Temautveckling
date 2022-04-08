@@ -14,3 +14,12 @@ Ni har fått en zip-fil med statiska HTML-filer för olika sidmallar.
 
 ### För VG  
 • Innehållet i sidfoten samt bloggens sidokolumn kunna redigeras ifrån admin-panelen.
+
+
+
+
+
+## Kommentarer till uppgiften:
+
+* Ändrade inlägg per sida till 2 för att paginationen skulle synas. I original är det 3st per sida. 
+* För att endast kategori 1, kategori 2 och kategori 3 skulle synas under bilderna, så gjorde jag dessa till tags istället för kategorier. Endast för att det skulle bli så nära mockup som möjligt. Detta också för att dessa kategorier inte skulle dyka upp i sidebaren tillsammans med "Natur" och "Okategoriserade". Så om det inte vore för mockupen hade kategori 1. kategori 2 och kategori 3 blivit kategorier istället. 
