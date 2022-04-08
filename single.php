@@ -11,7 +11,7 @@
 				the_post();
 				?>
 					<article>
-						<?php the_post_thumbnail();?>
+						<?php the_post_thumbnail(null, ['class' => 'img-responsive responsive--full', 'title' => 'Feature image'] );?>
 						<h1 class="title"><?php the_title(); ?></h1>
 						<ul class="meta">
 							<li>
