@@ -4,19 +4,6 @@
 include 'enqueue.php';
 
 
-// Lägg till menyer
-add_action('after_setup_theme', 'registrera_meny');
-
-function registrera_meny() {
-    register_nav_menu('socialmeny', 'Socialmeny');
-    register_nav_menu('huvudmeny', 'Huvudmeny');
-    register_nav_menu('sidebar-sidor', 'Sidebar-Sidor');
-    register_nav_menu('sidebar-arkiv', 'Sidebar-Arkiv');
-    register_nav_menu('sidebar-kategorier', 'Sidebar-Kategorier');
-    register_nav_menu('sibling-left', 'Sibling-right');
-    register_nav_menu('sibling-right', 'Sibling-left');
-}
-
 
 // Lägger till olika temasupports
 add_theme_support('post-thumbnails');
@@ -24,33 +11,67 @@ add_theme_support('menus');
 add_theme_support('widgets'); 
 
 
-// Lägger till widgets (sidebars)
+
+
+
+// Registrerar och lägger till menyer
+function registrera_meny() {
+    register_nav_menu('huvudmeny', 'Huvudmeny');
+    register_nav_menu('sidebar-sidor', 'Sidebar-Sidor');
+    register_nav_menu('sidebar-kategorier', 'Sidebar-Kategorier');
+    register_nav_menu('sidebar-sibling', 'Sidebar-Sibling');
+}
+
+add_action('after_setup_theme', 'registrera_meny');
+
+
+
+
+
+// Lägger till och registrerar widgets (sidebars)
 function my_register_sidebars() {
    
     register_sidebar( array(
-        'name' => 'primary_sidebar',
-        'id' => 'sidebar-1',
-        'before_widget' => '<aside id="secondary" class="col-xs-12 col-md-3">',
-        'after_widget'  => '</aside>',
+        'name' => 'footer-social',
+        'id' => 'footer-social',
+        'class' => 'social',
     ));
 
     register_sidebar( array(
-        'name' => 'sibling_sidebar-left',
-        'id' => 'sidebar-left',
-        'before_widget' => '<aside id="secondary" class="col-xs-12 col-md-3 col-md-pull-9">',
-        'after_widget'  => '</aside>',
+        'name' => 'footer-kontakt',
+        'id' => 'footer-kontakt',
     ));
 
     register_sidebar( array(
-        'name' => 'sibling_sidebar-right',
-        'id' => 'sidebar-right',
-        'before_widget' => '<aside id="secondary" class="col-xs-12 col-md-3">',
-        'after_widget'  => '</aside>',
+        'name' => 'footer-om',
+        'id' => 'footer-om',
     ));
+
+    register_sidebar( array(
+        'name' => 'footer-copyright',
+        'id' => 'footer-copyright',
+    ));
+    
+
+    register_sidebar( array(
+        'name' => 'arkiv-sidebar',
+        'id' => 'arkiv_sidebar',
+    ));
+
+    register_sidebar( array(
+        'name' => 'category-sidebar',
+        'id' => 'category_sidebar',
+    ));
+    register_sidebar( array(
+        'name' => 'sidor-sidebar',
+        'id' => 'sidor_sidebar',
+        'before' => '<div>',
+        'after' => '</div>'
+    ));
+
 }
 
 add_action( 'widgets_init', 'my_register_sidebars' );
 
-dynamic_sidebar(); // Behövs den här?
 
 ?>
