@@ -1,5 +1,7 @@
 <?php
 
+
+/* Registrerar och köar in script- och cssfiler */
 function enqueueFiles() {
 
 $uri = get_theme_file_uri();
@@ -19,6 +21,7 @@ $uri = get_theme_file_uri();
  wp_enqueue_script('jquery');
 
 }
+
 add_action('wp_enqueue_scripts', 'enqueueFiles');
 
 ?>
