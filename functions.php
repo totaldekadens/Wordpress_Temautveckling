@@ -1,11 +1,12 @@
 
 <?php 
 
+// Inkluderar 'enqueue.php' i 'functions.php'
 include 'enqueue.php';
 
 
 
-// Lägger till olika temasupports
+// Lägger till olika supportfunktioner till ditt tema
 add_theme_support('post-thumbnails');
 add_theme_support('menus'); 
 add_theme_support('widgets'); 
@@ -17,9 +18,8 @@ add_theme_support('widgets');
 // Registrerar och lägger till menyer
 function registrera_meny() {
     register_nav_menu('huvudmeny', 'Huvudmeny');
-    register_nav_menu('sidebar-sidor', 'Sidebar-Sidor');
-    register_nav_menu('sidebar-kategorier', 'Sidebar-Kategorier');
-    register_nav_menu('sidebar-sibling', 'Sidebar-Sibling');
+    register_nav_menu('sidebar-sidor', 'Sidebar-Sidor'); // Används om man vill att det skall se exakt ut som mockup. Se vidare kommentar i "sidebar.php" 
+    register_nav_menu('sidebar-sibling', 'Sidebar-Sibling'); 
 }
 
 add_action('after_setup_theme', 'registrera_meny');
@@ -30,21 +30,21 @@ add_action('after_setup_theme', 'registrera_meny');
 
 // Lägger till och registrerar widgets (sidebars)
 function my_register_sidebars() {
-   
+  
     register_sidebar( array(
-        'name' => 'footer-social',
-        'id' => 'footer-social',
+        'name' => 'footer-del-1',
+        'id' => 'footer-del-1',
+    ));
+
+    register_sidebar( array(
+        'name' => 'footer-del-2',
+        'id' => 'footer-del-2',
+    ));
+
+    register_sidebar( array(
+        'name' => 'footer-del-3',
+        'id' => 'footer-del-3',
         'class' => 'social',
-    ));
-
-    register_sidebar( array(
-        'name' => 'footer-kontakt',
-        'id' => 'footer-kontakt',
-    ));
-
-    register_sidebar( array(
-        'name' => 'footer-om',
-        'id' => 'footer-om',
     ));
 
     register_sidebar( array(
@@ -52,21 +52,45 @@ function my_register_sidebars() {
         'id' => 'footer-copyright',
     ));
     
-
     register_sidebar( array(
-        'name' => 'arkiv-sidebar',
-        'id' => 'arkiv_sidebar',
+        'name' => 'sidebar-del-1',
+        'id' => 'sidebar-del-1',
     ));
 
     register_sidebar( array(
-        'name' => 'category-sidebar',
-        'id' => 'category_sidebar',
+        'name' => 'sidebar-del-2',
+        'id' => 'sidebar-del-2',
     ));
+
     register_sidebar( array(
-        'name' => 'sidor-sidebar',
-        'id' => 'sidor_sidebar',
-        'before' => '<div>',
-        'after' => '</div>'
+        'name' => 'sidebar-del-3',
+        'id' => 'sidebar-del-3',
+    ));
+
+    // Används om man vill att det skall se exakt ut som mockup. Se vidare kommentar i "sidebar.php"
+    register_sidebar( array(
+        'name' => 'sidor-sidebar-rubrik',
+        'id' => 'sidor_sidebar-rubrik',
+
+    ));
+
+    register_sidebar( array(
+        'name' => 'contact-form',
+        'id' => 'contact-form',
+
+    ));
+
+    // Searchform alt.2
+    register_sidebar( array(
+        'name' => 'searchform-title',
+        'id' => 'searchform-title',
+    ));
+
+    // Searchform alt.1
+    register_sidebar( array(
+        'name' => 'searchform',
+        'id' => 'searchform',
+
     ));
 
 }

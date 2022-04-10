@@ -17,7 +17,6 @@
             		'menu_class' => 'side-menu',
             			)); ?> 
 				</aside>
-				
 			</div>
 		</div>
 	</section>

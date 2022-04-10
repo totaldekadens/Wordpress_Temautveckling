@@ -1,7 +1,23 @@
-<form role="search" action="<?php echo esc_url( home_url('/')); ?>" method="GET" id="searchform" class="searchform">
+
+<?php dynamic_sidebar('searchform') ?>
+
+
+
+
+<!-- Nedan är utan widget men exakt som mockup istället: -->
+
+<!-- <form role="search" action="<?php  /* echo esc_url( home_url('/')); */ ?>" method="GET" id="searchform" class="searchform">
     <div>
-        <label class="screen-reader-text" for="s" >Sök efter:</label> <!-- Visas ej just nu -->
-        <input name="s" id="s" type="text" value="<?php the_search_query(); ?>" />
+        <?php /* dynamic_sidebar('searchform-title') */?>
+        <input name="s" id="s" type="text" value="<?php /* the_search_query(); */ ?>" />
         <input type="submit" value="Sök" />
     </div>
-</form>
+</form> -->
+
+
+
+
+
+
+
+

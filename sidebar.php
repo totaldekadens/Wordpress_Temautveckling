@@ -8,41 +8,27 @@
         </ul>
         <ul role="navigation">
             <li class="pagenav">
+                <?php dynamic_sidebar('sidebar-del-1'); ?> <!-- Lägger till rubrik samt en lista av alla sidor (inkl. undersidorna) (Widget)  -->
+                
+                
+                
+                <!-- Alternativ med widget och meny om man vill att det skall se ut exakt som mockup.  -->
+                <!----------------------------------------------------------------------------------->
+                <!-- Rubrik "Sidor" (Widget) -->
+                <?php /* dynamic_sidebar('sidor-sidebar-rubrik'); */ ?> 
 
-                <!-- Lägger till rubrik på listan med sidor (Widget)  -->
-                <?php dynamic_sidebar('sidor-sidebar'); ?> 
-
-                <!-- Lägger till en meny baserat på utvalda sidor (Meny). 
-                När jag valde widget så kunde jag inte anpassa vilka sidor jag kunde välja. 
-                Så det fick bli meny för att komma så nära original som möjligt då "undersidorna" inte är med i mockup.   -->
-                <?php wp_nav_menu(array(  
+                <!-- Lägger till en meny baserat på utvalda sidor (Meny). --> 
+                <?php /* wp_nav_menu(array(  
                     'theme_location' => 'sidebar-sidor',
                     'menu_class' => 'menu',
-                        )); ?> 
-            <li>
-             <!-- Lägger till en rubrik samt länk till Arkiv (Widget) -->   
-            <?php dynamic_sidebar('arkiv-sidebar'); ?>
+                        ));  */?> 
+                <!----------------------------------------------------------------------------------->
             </li>
-
+            <li>
+                <?php dynamic_sidebar('sidebar-del-2'); ?> <!-- Lägger till en rubrik samt länk till Arkiv (Widget) -->   
+            </li>
             <li class="categories">
-            <!-- Lägger till rubrik på listan med Kategorier (Widget)  -->    
-            <?php dynamic_sidebar('category-sidebar'); ?>
-                <?php 
-                
-                    /* Funkar ej nedan. Vill lägga till antalet för varje kategori */
-                    $categories = get_categories();
-      
-                    for ($i=0; $i < count($categories); $i++) { 
-                        $category = $categories[$i];
-                        $count = $category->category_count;   
-                    }
-
-                    /* Lägger till en meny baserat på kategorier (Meny). Försökte med widget först, men fick inte det önskade utseendet jag ville ha med antal så som det är i original */
-                     wp_nav_menu(array(
-            		'theme_location' => 'sidebar-kategorier',
-            		'menu_class' => 'menu',
-                    'after' => ' ('.$count.')',
-            			)); ?> 
+                <?php dynamic_sidebar('sidebar-del-3'); ?> <!-- Lägger till rubrik samt en lista med Kategorier (Widget)  -->   
             </li>
         </ul>
     </div>
