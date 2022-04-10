@@ -23,3 +23,9 @@ Ni har fått en zip-fil med statiska HTML-filer för olika sidmallar.
 
 * Ändrade inlägg per sida till 2 för att paginationen skulle synas. I original är det 3st per sida. 
 * För att endast kategori 1, kategori 2 och kategori 3 skulle synas under bilderna, så gjorde jag dessa till tags istället för kategorier. Endast för att det skulle bli så nära mockup som möjligt. Detta också för att dessa kategorier inte skulle dyka upp i sidebaren tillsammans med "Natur" och "Okategoriserade". Så om det inte vore för mockupen hade kategori 1. kategori 2 och kategori 3 blivit kategorier istället. 
+* Två alternativ av sökfunktionen finns tillhörande sidebaren. 
+            * En som är widget (blev inte hundra lik mockup, det är denna som syns i resultatet) och.. 
+            * En som är gjord via "searchform". Denna blev precis som mockup. (Är dold för tillfället i koden, se searchform.php). 
+* Det finns även två alternativ gällande "Sidor" i sidebaren. 
+            * Det som visas i resultatet är en widget tillhörande rubrik och alla sidor på hemsidan. Dvs ej enligt mockup då undersidor bl.a inte är med där. 
+            * En alternativ kod finns längre ner dold där jag gjorde en mix av en widget och meny. Denna mix gjorde det möjligt att få exakt som mockup då det var                     specifikt utvalda sidor där. (Se sidebar.php) 
