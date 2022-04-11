@@ -80,13 +80,12 @@ function my_register_sidebars() {
 
     ));
 
-    // Searchform alt.2
+
     register_sidebar( array(
         'name' => 'searchform-title',
         'id' => 'searchform-title',
     ));
 
-    // Searchform alt.1
     register_sidebar( array(
         'name' => 'searchform',
         'id' => 'searchform',

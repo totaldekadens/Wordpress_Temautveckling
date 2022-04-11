@@ -3,7 +3,7 @@
     <div id="sidebar">
         <ul>
             <li>
-                <?php get_search_form(); ?> <!-- Hämtar "searchform.php -->
+                <?php dynamic_sidebar('searchform') ?>
             </li>
         </ul>
         <ul role="navigation">
