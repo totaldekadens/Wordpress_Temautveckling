@@ -224,10 +224,18 @@ main {
 	width: 57px;
 }
 
+.wp-block-search__inside-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
 .wp-block-search__button {
 	height: 30px;
+	margin-left: 0px;
 	background-color: crimson;
 	color: white;
+	border: 1px solid crimson;
 				
 }
 
@@ -480,7 +488,7 @@ article .meta {
 	#sidebar > ul {
 		border-bottom: solid 1px black;
 		margin: 0;
-		padding: 30px 30px 0;
+		padding: 30px 30px 30px;
 	}
 
 		#sidebar > ul > li {
@@ -489,7 +497,7 @@ article .meta {
 		}
 
 		 #sidebar:first-child > ul > li:first-child {
-			/* display: none; */
+			display: none;
 		}
 
 		 #sidebar > ul .widget_block {
