@@ -5,7 +5,13 @@
 		<div class="container">
 			<div class="row">
 				<div id="primary" class="col-xs-12 col-md-9">
+				
+				<?php if(is_archive() && !is_home() && !is_category() && !is_author() && !is_tag()){ ?>
+				<h1>Arkiv: <?php wp_title(''); ?></h1>
+				<?php } else { ?>
 					<h1><?php wp_title(''); ?></h1>
+				<?php }?>
+
 					<?php 
 					while (have_posts()) {
 						the_post();
