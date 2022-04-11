@@ -27,3 +27,6 @@ Ni har fått en zip-fil med statiska HTML-filer för olika sidmallar.
 * Det finns två alternativ gällande "Sidor" i sidebaren. 
     - Det som visas i resultatet är en widget tillhörande rubrik och alla sidor på hemsidan. Dvs ej enligt mockup då undersidor bl.a inte är med där. 
     - En alternativ kod finns längre ner dold där jag gjorde en mix av en widget och meny. Denna mix gjorde det möjligt att få exakt som mockup då det var                     specifikt utvalda sidor där. (Se sidebar.php) 
+
+
+Github-repo: https://github.com/totaldekadens/Wordpress_Temautveckling
