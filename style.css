@@ -236,8 +236,15 @@ main {
 	background-color: crimson;
 	color: white;
 	border: 1px solid crimson;
-				
+
 }
+
+#wp-block-search__input-1 {
+
+	color: black;
+}
+				
+
 
 
 /*  */
